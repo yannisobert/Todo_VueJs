@@ -63,3 +63,4 @@ This componet is implemented based on [v-slot](https://v3.vuejs.org/guide/compon
 | :--------- | :------- | :----- | :------------------------------- |
 | modelValue | REQUIRED | ARRAY  | v-model value, items to be bound |
 | transition | OPTIONAL | STRING | transition delay in ms           |
+# Todo_VueJs
