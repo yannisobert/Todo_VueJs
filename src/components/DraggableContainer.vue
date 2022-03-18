@@ -24,31 +24,33 @@ import { useDraggableContainer } from "../composables/draggable";
 export default {
   name: "Draggable",
   components: {
-    DraggableItem
+    DraggableItem,
   },
   props: {
     modelValue: Array,
     transition: {
       default: "0",
-      type: String
-    }
+      type: String,
+    },
+    title: {
+      type: String,
+      default: "",
+    },
   },
   setup(props, context) {
     const { modelValue } = toRefs(props);
-    const {
-      id,
-      items,
-      onDragOver,
-      onItemDragOver,
-    } = useDraggableContainer(modelValue, context);
+    const { id, items, onDragOver, onItemDragOver } = useDraggableContainer(
+      modelValue,
+      context
+    );
 
     return { id, items, onDragOver, onItemDragOver };
   },
   computed: {
     transitionStyle() {
       return `transform ${this.transition}ms`;
-    }
-  }
+    },
+  },
 };
 </script>
 

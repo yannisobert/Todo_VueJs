@@ -23,7 +23,7 @@ export default {
   props: {
     item: Object,
     position: Number,
-    containerId: Number
+    containerId: Number,
   },
   setup(props, context) {
     const { item, position, containerId } = toRefs(props);
@@ -34,7 +34,7 @@ export default {
       onDragOver,
       onDragEnd,
       transitionStart,
-      transitionEnd
+      transitionEnd,
     } = useDraggableItem(item, position, containerId, context);
 
     return {
@@ -44,9 +44,9 @@ export default {
       onDragOver,
       onDragEnd,
       transitionStart,
-      transitionEnd
+      transitionEnd,
     };
-  }
+  },
 };
 </script>
 
